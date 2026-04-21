@@ -41,8 +41,7 @@ En esta actividad se actualizó la estructura de datos para incluir una URL de i
 4. Navegar a: `http://localhost:5173`
 
 ## URL de GitHub
-
-- Repositorio: [https://github.com/Antony-potato/ChuckJokesVue](https://github.com/Antony-potato/ChuckJokesVue) (Reemplazar con la URL final si es distinta)
+https://github.com/Antony-potato/ChuckJokesVue.git
 
 ## Commit de Entrega
 - Mensaje: `Task10`
