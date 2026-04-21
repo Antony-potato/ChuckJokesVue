@@ -53,3 +53,4 @@ npm run build
 - Capturas de pantalla de la aplicacion funcionando
 - Documento en formato de reporte
 - Enlace al repositorio en GitHub
+"# ChuckJokesVue" 
