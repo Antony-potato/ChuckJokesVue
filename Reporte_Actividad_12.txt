@@ -1,0 +1,45 @@
+REPORTE DE ACTIVIDAD: DESARROLLO WEB
+---------------------------------------
+
+DATOS DEL ALUMNO:
+Nombre: [NOMBRE_DEL_ALUMNO]
+Matricula: [MATRICULA]
+Institucion: Universidad Tecmilenio
+Materia: Desarrollo de Aplicaciones Web
+
+DESCRIPCION DE LA ACTIVIDAD:
+Actualizacion de la aplicacion "Chuck Jokes Vue" para incluir iconos de imagen en los chistes de Chuck Norris, implementar un componente personalizado (chuck-card), y asegurar un diseño responsivo utilizando Bootstrap 5.
+
+OBJETIVO:
+Dominar el uso de componentes en Vue 3, el pasaje de informacion mediante props, la iteracion de datos con v-for, y la implementacion de layouts adaptables con el sistema de grid de Bootstrap.
+
+PROCEDIMIENTO PASO A PASO:
+
+1. Integracion de Frameworks:
+   Se agrego el CDN de Bootstrap 5 en el archivo index.html para habilitar los componentes y estilos de rejilla de forma rapida y eficiente.
+
+2. Creacion del Componente ChuckCard:
+   Se creo el archivo src/components/ChuckCard.vue. Este componente recibe icon_url y value como props. Se diseño utilizando las clases .card, .card-img-top y .card-body de Bootstrap, con estilos CSS personalizados para un acabado premium.
+
+3. Actualizacion de Datos y Logica en App.vue:
+   - Se actualizo el arreglo de chistes para incluir el campo icon_url proporcionado.
+   - Se importo el componente ChuckCard.
+   - Se implemento la directiva v-for para generar una tarjeta por cada chiste en el arreglo.
+
+4. Diseño Responsivo:
+   Se utilizo la clase de Bootstrap .row-cols-1 para pantallas pequeñas (movil) y .row-cols-md-3 para pantallas de escritorio. Se agrego .justify-content-center para que los elementos sobrantes en la ultima fila se vean equilibrados.
+
+5. Estilizacion y Pulido:
+   Se ajustaron los estilos globales en style.css y localmente en los componentes para incluir animaciones de entrada (fade-in) y efectos de hover en las tarjetas.
+
+6. Documentacion y Control de Versiones:
+   Se actualizo el archivo README.md con las instrucciones de uso y se realizo un commit a Git con el mensaje "Task10".
+
+CAPTURA DE PANTALLA EXPLICATIVA:
+[PLACEHOLDER: Inserta aqui una captura de la aplicacion en vista de escritorio mostrando 3 columnas]
+
+CAPTURA DE PANTALLA RESPONSIVA:
+[PLACEHOLDER: Inserta aqui una captura de la aplicacion en vista movil mostrando 1 columna]
+
+URL DE GITHUB:
+[PONER_AQUI_TU_URL_DE_GITHUB] (Ejemplo: https://github.com/Antony-potato/ChuckJokesVue)

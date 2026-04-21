@@ -1,62 +1,91 @@
 <script setup>
+import ChuckCard from './components/ChuckCard.vue';
+
 const chuck = [
   {
-    value: 'Chuck Norris can skydive into outer space.',
+    "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+    "value": "Chuck Norris can skydive into outer space."
   },
   {
-    value: 'The chief export of Chuck Norris is pain.',
+    "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+    "value": "The chief export of Chuck Norris is pain."
   },
   {
-    value: "Chuck Norris doesn't read books. He stares them down until he gets the information he wants.",
+    "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+    "value": "Chuck Norris doesn't read books. He stares them down until he gets the information he wants."
   },
   {
-    value: 'Time waits for no man. Unless that man is Chuck Norris.',
+    "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+    "value": "Time waits for no man. Unless that man is Chuck Norris."
   },
   {
-    value: 'If you spell Chuck Norris in Scrabble, you win. Forever.',
-  },
-]
+    "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+    "value": "If you spell Chuck Norris in Scrabble, you win. Forever."
+  }
+];
 </script>
 
 <template>
-  <main class="layout">
-    <section class="hero">
-      <p class="eyebrow">Actividad Vue</p>
-      <h1>Chuck Jokes Vue</h1>
-      <p class="intro">
-        Vista principal construida con Vue para mostrar chistes de Chuck Norris
-        desde los datos del componente principal usando la directiva
-        <code>v-for</code>.
-      </p>
-
-      <div class="hero-meta">
-        <span>{{ chuck.length }} chistes cargados</span>
-        <span>Vue 3 + Vite</span>
-      </div>
-    </section>
-
-    <section class="panel">
-      <div class="panel-head">
-        <div>
-          <p class="section-label">Coleccion</p>
-          <h2>Listado renderizado dinamicamente</h2>
+  <div class="main-container py-5 min-vh-100">
+    <header class="container text-center mb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <span class="badge bg-danger mb-2 text-uppercase tracking-wider">Actividad 12</span>
+          <h1 class="display-4 fw-bold mb-3">Chuck Norris Facts</h1>
+          <p class="lead text-muted">Explorando componentes de Vue y layouts responsivos con Bootstrap.</p>
+          <div class="header-divider mx-auto my-4"></div>
         </div>
-        <p class="panel-copy">
-          Cada tarjeta se genera iterando el arreglo definido en el componente
-          principal.
-        </p>
       </div>
+    </header>
 
-      <ul class="joke-list">
-        <li
+    <main class="container">
+      <!-- Grid System: 3 columns on Desktop (md), 1 column on Mobile (implicit) -->
+      <!-- We use justify-content-center for the last row (if it has fewer items) -->
+      <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+        <ChuckCard
           v-for="(joke, index) in chuck"
-          :key="`${index}-${joke.value}`"
-          class="joke-card"
-        >
-          <span class="joke-index">0{{ index + 1 }}</span>
-          <p>{{ joke.value }}</p>
-        </li>
-      </ul>
-    </section>
-  </main>
+          :key="index"
+          :icon_url="joke.icon_url"
+          :value="joke.value"
+        />
+      </div>
+    </main>
+
+    <footer class="container text-center mt-5 pt-5 text-muted border-top">
+      <p>&copy; 2024 ChuckJokesVue Project | Desarrollado con Vue 3 + Vite</p>
+    </footer>
+  </div>
 </template>
+
+<style>
+:root {
+  --bg-color: #f0f2f5;
+  --header-color: #1a1a1a;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--header-color);
+}
+
+.main-container {
+  background: radial-gradient(circle at top right, #ffffff, transparent),
+              radial-gradient(circle at bottom left, #e9ecef, transparent);
+}
+
+.tracking-wider {
+  letter-spacing: 2px;
+}
+
+.header-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #dc3545;
+  border-radius: 2px;
+}
+
+.card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+</style>
